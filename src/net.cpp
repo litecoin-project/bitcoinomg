@@ -1531,9 +1531,6 @@ void ThreadMessageHandler()
         CNode* pnodeTrickle = NULL;
         if (!vNodesCopy.empty())
             pnodeTrickle = vNodesCopy[GetRand(vNodesCopy.size())];
-        
-        bool fSleep = true;
-        
         BOOST_FOREACH(CNode* pnode, vNodesCopy)
         {
             if (pnode->fDisconnect)
@@ -1543,13 +1540,8 @@ void ThreadMessageHandler()
             {
                 TRY_LOCK(pnode->cs_vRecvMsg, lockRecv);
                 if (lockRecv)
-                {
                     if (!ProcessMessages(pnode))
                         pnode->CloseSocketDisconnect();
-                    
-                    if (!pnode->vRecvGetData.empty() || !pnode->vRecvMsg.empty())
-                        fSleep = false;
-                }
             }
             boost::this_thread::interruption_point();
 
@@ -1567,9 +1559,8 @@ void ThreadMessageHandler()
             BOOST_FOREACH(CNode* pnode, vNodesCopy)
                 pnode->Release();
         }
-        
-        if (fSleep)
-            MilliSleep(100);
+
+        MilliSleep(100);
     }
 }
 

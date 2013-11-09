@@ -3878,8 +3878,6 @@ bool ProcessMessages(CNode* pfrom)
 
         if (!fRet)
             printf("ProcessMessage(%s, %u bytes) FAILED\n", strCommand.c_str(), nMessageSize);
-        
-        break;
     }
 
     // In case the connection got shut down, its receive buffer was wiped
