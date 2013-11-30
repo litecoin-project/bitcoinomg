@@ -294,6 +294,18 @@ class PosixMmapFile : public WritableFile {
       src += n;
       left -= n;
     }
+#if defined(OS_MACOSX)
+    if (dst_ > last_sync_) {
+      // Find the beginnings of the pages that contain the first and last
+      // bytes to be synced.
+      size_t p1 = TruncateToPageBoundary(last_sync_ - base_);
+      size_t p2 = TruncateToPageBoundary(dst_ - base_ - 1);
+      last_sync_ = dst_;
+      if (msync(base_ + p1, p2 - p1 + page_size_, MS_SYNC) < 0) {
+        return IOError(filename_, errno);
+      }
+    }
+#endif
     return Status::OK();
   }
 
