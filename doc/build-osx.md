@@ -111,8 +111,8 @@ Rerunning "openssl version" should now return the correct version.
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:bitcoin/bitcoin.git bitcoin
-        cd bitcoin
+        git clone https://github.com/litecoin-project/bitcoinomg
+        cd bitcoinomg
 
 2.  Modify source in order to pick up the `openssl` library.
 
