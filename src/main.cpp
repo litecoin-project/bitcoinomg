@@ -55,7 +55,7 @@ unsigned int nCoinCacheSize = 5000;
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
 int64 CTransaction::nMinTxFee = 10000;  // Override with -mintxfee
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
-int64 CTransaction::nMinRelayTxFee = 10000;
+int64 CTransaction::nMinRelayTxFee = 1000;
 
 CMedianFilter<int> cPeerBlockCounts(8, 0); // Amount of blocks that other nodes claim to have
 
@@ -365,8 +365,8 @@ bool CTxOut::IsDust() const
     // to spend something, then we consider it dust.
     // A typical txout is 34 bytes big, and will
     // need a CTxIn of at least 148 bytes to spend,
-    // so dust is a txout less than 54 uBTC
-    // (5460 satoshis) with default nMinRelayTxFee
+    // so dust is a txout less than 546 satoshis 
+    // with default nMinRelayTxFee.
     return ((nValue*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < CTransaction::nMinRelayTxFee);
 }
 
