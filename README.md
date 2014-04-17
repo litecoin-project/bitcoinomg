@@ -1,9 +1,13 @@
-Bitcoin integration/staging tree
+Bitcoin OMG integration/staging tree
 ================================
 
 http://www.bitcoin.org
 
 Copyright (c) 2009-2013 Bitcoin Developers
+
+***
+Bitcoin OMG is like bitcoin, but with many additional features courtesy of the Litecoin developers. See [https://bitcointalk.org/index.php?topic=320695](this forum thread) for more info.
+***
 
 What is Bitcoin?
 ----------------
