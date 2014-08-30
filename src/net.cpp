@@ -1041,8 +1041,6 @@ void ThreadSocketHandler()
             BOOST_FOREACH(CNode* pnode, vNodesCopy)
                 pnode->Release();
         }
-
-        MilliSleep(10);
     }
 }
 
