@@ -53,6 +53,10 @@
         <translation>حذف العنوان المحدد من القائمة</translation>
     </message>
     <message>
+        <source>Export the data in the current tab to a file</source>
+        <translation>تحميل البيانات في علامة التبويب الحالية إلى ملف.</translation>
+    </message>
+    <message>
         <source>&amp;Export</source>
         <translation>&amp;تصدير</translation>
     </message>
@@ -81,6 +85,14 @@
         <translation>استقبال العناوين</translation>
     </message>
     <message>
+        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>هذه هي عناوين Bitcion التابعة لك من أجل إرسال الدفعات. تحقق دائما من المبلغ و عنوان المرسل المستقبل قبل إرسال العملات</translation>
+    </message>
+    <message>
+        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>هذه هي عناوين Bitcion التابعة لك من أجل إستقبال الدفعات. ينصح استخدام عنوان جديد من أجل كل صفقة</translation>
+    </message>
+    <message>
         <source>Copy &amp;Label</source>
         <translation>نسخ &amp;الوصف</translation>
     </message>
@@ -91,6 +103,10 @@
     <message>
         <source>Export Address List</source>
         <translation>تصدير قائمة العناوين</translation>
+    </message>
+    <message>
+        <source>Comma separated file (*.csv)</source>
+        <translation>ملف مفصول بفواصل (*.csv)</translation>
     </message>
     <message>
         <source>Exporting Failed</source>
@@ -114,6 +130,10 @@
 </context>
 <context>
     <name>AskPassphraseDialog</name>
+    <message>
+        <source>Passphrase Dialog</source>
+        <translation>حوار جملة السر</translation>
+    </message>
     <message>
         <source>Enter passphrase</source>
         <translation>ادخل كلمة المرور</translation>
@@ -163,6 +183,18 @@
         <translation>تأكيد تشفير المحفظة</translation>
     </message>
     <message>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <translation>تحذير: إذا قمت بتشفير محفظتك وفقدت كلمة المرور الخاص بك, ستفقد كل عملات BITCOINS الخاصة بك.</translation>
+    </message>
+    <message>
+        <source>Are you sure you wish to encrypt your wallet?</source>
+        <translation>هل أنت متأكد من رغبتك في تشفير محفظتك ؟</translation>
+    </message>
+    <message>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>هام: أي نسخة إحتياطية سابقة  قمت بها لمحفظتك يجب استبدالها  بأخرى حديثة، مشفرة. لأسباب أمنية، النسخ الاحتياطية السابقة لملفات المحفظة الغير مشفرة تصبح عديمة الفائدة مع بداية استخدام المحفظة المشفرة الجديدة.</translation>
+    </message>
+    <message>
         <source>Warning: The Caps Lock key is on!</source>
         <translation>تحذير: مفتاح الحروف الكبيرة مفعل</translation>
     </message>
@@ -198,7 +230,11 @@
         <source>Wallet decryption failed</source>
         <translation>فشل   فك التشفير المحفظة</translation>
     </message>
-    </context>
+    <message>
+        <source>Wallet passphrase was successfully changed.</source>
+        <translation>لقد تم تغير عبارة مرور المحفظة بنجاح</translation>
+    </message>
+</context>
 <context>
     <name>BitcoinGUI</name>
     <message>
@@ -266,12 +302,24 @@
         <translation>&amp;تغيير كلمة المرور</translation>
     </message>
     <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>ارسال العناوين.</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>استقبال العناوين</translation>
+    </message>
+    <message>
         <source>Open &amp;URI...</source>
         <translation>افتح &amp;URI...</translation>
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
         <translation>ارسل عملات الى عنوان بيتكوين</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for Bitcoin</source>
+        <translation>تعديل إعدادات bitcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -310,6 +358,10 @@
         <translation>عرض او اخفاء النافذة الرئيسية</translation>
     </message>
     <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>تشفير المفتاح الخاص بمحفظتك</translation>
+    </message>
+    <message>
         <source>&amp;File</source>
         <translation>&amp;ملف</translation>
     </message>
@@ -332,6 +384,10 @@
     <message>
         <source>Bitcoin Core</source>
         <translation>جوهر البيت كوين</translation>
+    </message>
+    <message>
+        <source>&amp;About Bitcoin Core</source>
+        <translation>حول bitcoin core</translation>
     </message>
     <message>
         <source>Bitcoin client</source>
@@ -1528,6 +1584,10 @@
         <translation>نجح التصدير</translation>
     </message>
     <message>
+        <source>Comma separated file (*.csv)</source>
+        <translation>ملف مفصول بفواصل (*.csv)</translation>
+    </message>
+    <message>
         <source>Confirmed</source>
         <translation>تأكيد</translation>
     </message>
@@ -1579,6 +1639,10 @@
     <message>
         <source>&amp;Export</source>
         <translation>&amp;تصدير</translation>
+    </message>
+    <message>
+        <source>Export the data in the current tab to a file</source>
+        <translation>تحميل البيانات في علامة التبويب الحالية إلى ملف.</translation>
     </message>
     <message>
         <source>Backup Wallet</source>
